@@ -2,7 +2,7 @@
 'RCET 0265
 'Spring 22
 'Shuffle the Deck
-'
+'https://github.com/bogacars/ShuffleTheDeck_CB.git
 
 Option Explicit On
 Option Strict On
@@ -16,20 +16,15 @@ Module ShuffleTheDeck_CB
             'see if card has been drawn from the deck
             'if card is drawn then displayed in array
             'if card hasn't been drawn it won't display
-
             Do
                 Suit = RandomNumberInRange(3)
                 Card = RandomNumberInRange(12)
             Loop While Hand(Suit, Card)
-
             Hand(Suit, Card) = True
-
             Console.Clear()
             DisplayHand(Hand)
             Console.ReadLine()
-
         Next
-
         DisplayHand(Hand)
         Console.Read()
         'press enter to draw a card
